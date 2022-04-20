@@ -16,6 +16,8 @@ En este documento se describirá las consideraciones tomadas para un caso práct
 
 El siguiente esquema entidad-relación se usará de base para la creación de la base de datos.
 
+![diagrama](/diagrama.png)
+
 ## Entidades
 
     • Recipes
