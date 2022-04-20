@@ -32,10 +32,10 @@ Dado que los nombres de las entidades son lo suficientemente descriptivos se pro
 **Ingredients_Types**: representa una forma de categorizar ingredientes por su tip.
 **Recipe_Step_Ingredients**: Relación entre los pasos para la receta (Recipe_Steps) y los ingredientes (Ingredients).
 
-> Se permitirá cierta redundancia de datos, lo cual facilitará el desarrollo de consultas. Se simplificará el esquema debido a que existen entidades fuertemente relacionadas.
+- []Se permitirá cierta redundancia de datos, lo cual facilitará el desarrollo de consultas. Se simplificará el esquema debido a que existen entidades fuertemente relacionadas.
 
-> Se tiene que los pasos para cada receta (Recipe_Steps) siempre estarán ligados a la receta (Recipes) por lo tanto Recipe contendrá Recipe_Steps. A su vez Recipe_Steps contendrá ingredientes. 
-> 
-> Recipe_Steps no tiene sentido que exista sin su receta por lo tanto se asume que no será usual consultar Recipe_Steps de forma independiente. Por ello no se creará una colección que la represente por si sola.
-> 
-> Se considerará Ingredient_Types como parte de la colección Ingredients. Siendo así puede haber muchos tipos de ingredientes y cada ingrediente pertenecerá a un solo tipo, con lo cual se mantiene la relación 1 a muchos.
+-[]Se tiene que los pasos para cada receta (Recipe_Steps) siempre estarán ligados a la receta (Recipes) por lo tanto Recipe contendrá Recipe_Steps. A su vez Recipe_Steps contendrá ingredientes. 
+
+- [x]Recipe_Steps no tiene sentido que exista sin su receta por lo tanto se asume que no será usual consultar Recipe_Steps de forma independiente. Por ello no se creará una colección que la represente por si sola.
+
+[x]Se considerará Ingredient_Types como parte de la colección Ingredients. Siendo así puede haber muchos tipos de ingredientes y cada ingrediente pertenecerá a un solo tipo, con lo cual se mantiene la relación 1 a muchos.
