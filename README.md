@@ -26,11 +26,17 @@ El siguiente esquema entidad-relación se usará de base para la creación de la
 Dado que los nombres de las entidades son lo suficientemente descriptivos se procede a detallar la interpretación de cada entidad para su implementación en MongoDB
 
 **Recipes**: Receta, pertenece a una categoría está compuesta de pasos que a su vez contienen ingredientes.
+
 **Recipe_Category**: Entidad que representa a las categorías a la cual pertece cada receta, en categoría no debiera necesitarse la información completa de la receta pero si el identificador de cada una de ellas.
+
 **Recipe_Steps**: Pasos, pertenece a receta y contiene principalmente ingredientes e instrucciones.
+
 **Ingredients**: Entidad que debe pertenecer a Recipe_Steps y puede contener Ingredients_Types.
+
 **Ingredients_Types**: representa una forma de categorizar ingredientes por su tip.
+
 **Recipe_Step_Ingredients**: Relación entre los pasos para la receta (Recipe_Steps) y los ingredientes (Ingredients).
+
 
 - Se permitirá cierta redundancia de datos, lo cual facilitará el desarrollo de consultas. Se simplificará el esquema debido a que existen entidades fuertemente relacionadas.
 
