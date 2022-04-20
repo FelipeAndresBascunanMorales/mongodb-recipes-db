@@ -1,0 +1,169 @@
+
+const database = 'RECIPES';
+
+use(database);
+
+db.recipeCategory.insertMany([
+  {
+    id: '1',
+    name: 'Breakfast',
+    Recipes: [
+    {
+        id: '11',
+        name: 'Wafles',
+    }]
+  },
+  {
+    id: '2',
+    name: 'Dessert',
+    Recipes: [
+    {
+        id: '33',
+        name: 'Chocolate Cake',
+    }]
+  },
+  {
+    id: '3',
+    name: 'Roast',
+    recipes: [
+    {
+        id: '44',
+        name: 'Roast Chicken',
+    },
+    {
+        id: '55',
+        name: 'Roast Pork',
+    }]
+  },
+]);
+
+db.recipe.insertMany([
+  {
+    id: '11',
+    name: 'Wafles',
+    description: 'Wafles are a type of pancake, often served as a light breakfast dish. They are made by frying a batter in a thin, unleavened dough, then frying the wafles until golden brown.',
+
+    category: [
+        {
+            id: '1',
+            name: 'Breakfast'
+        }],
+    recipeSteps:[
+        {
+            stepNumber: '1',
+            instruction: 'Preheat the oven to 350 degrees F (175 degrees C). Grease a 9-inch round baking pan.',
+            prep_time: '10 minutes',
+            cook_time: '10 minutes',
+            ingredients: [
+                {
+                    id: '1',
+                    name: 'Flour',
+                    quantity: '1 cup',
+                    unit: 'cup'
+                },
+                {
+                    id: '2',
+                    name: 'Sugar',
+                    quantity: '1/2 cup',
+                    unit: 'cup'
+                },
+                {
+                    id: '3',
+                    name: 'Baking powder',
+                    quantity: '1/4 teaspoon',
+                    unit: 'teaspoon'
+                },
+                {
+                    id: '4',
+                    name: 'Salt',
+                    quantity: '1/4 teaspoon',
+                    unit: 'teaspoon'
+                }
+            ]
+        }
+    ]
+  },
+  {
+    id: '22',
+    name: 'Chocolate Cake',
+    description: 'Chocolate cake is a cake that is made with chocolate, flour, eggs, and butter. It is often served with whipped cream or chocolate sauce.',
+    category: [
+        {
+            id: '2',
+            name: 'Dessert'
+        }],
+    recipeSteps:[
+        {
+            stepNumber: '1',
+            instruction: 'Preheat the oven to 350 degrees F (175 degrees C). Grease a 9-inch round baking pan.',
+            prep_time: '10 minutes',
+            cook_time: '10 minutes',
+            ingredients: [
+                {
+                    id: '5',
+                    name: 'Chocolate',
+                    quantity: '1 cup',
+                    unit: 'cup'
+                },
+                {
+                    id: '1',
+                    name: 'Flour',
+                    quantity: '1 cup',
+                    unit: 'cup'
+                },
+                {
+                    id: '6',
+                    name: 'Eggs',
+                    quantity: '1',
+                    unit: 'egg'
+                },
+                {
+                    id: '7',
+                    name: 'Butter',
+                    quantity: '1/2 cup',
+                    unit: 'cup'
+                }
+            ]
+        }
+    ]
+  }
+]
+);
+
+db.ingredients.insertMany([
+    {
+        id: '1',
+        name: 'Flour',
+        type: 'Flours'
+    },
+    {
+        id: '2',
+        name: 'Sugar',
+        type: 'Sweetener'
+    },
+    {
+        id: '3',
+        name: 'Baking powder',
+        type: 'Leaven'
+    },
+    {
+        id: '4',
+        name: 'Salt',
+        type: 'Salty'
+    },
+    {
+        id: '5',
+        name: 'Chocolate',
+        type: 'Dairy'
+    },
+    {
+        id: '6',
+        name: 'Eggs',
+        type: 'Eggs'
+    },
+    {
+        id: '7',
+        name: 'Butter',
+        type: 'Dairy'
+    }
+]);
